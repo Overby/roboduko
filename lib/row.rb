@@ -4,6 +4,8 @@ class Row
   attr_reader :input, :possibilities
 
   def initialize(input)
+    #@stdin = input_stream
+    #@input = input_stream   #revise
     @input = input.join.chars.map { |element| element.to_i }
     @possibilities = [1,2,3,4,5,6,7,8,9]
   end
@@ -13,10 +15,9 @@ class Row
   #through iterating through each position of possibilities
   #if number in input is found in possiblities
   #remove number from possibilities
-
-  # @input = input.chars.map { |element| element.to_i }
   def reduce_possibility
-    input.each do |num|   #what enum is better than each here?
+    @input = stdin.gets.chomp
+    input.each do |num|   #what enum better than each? delete_if? select?
       if @possibilities.include?(num)
         deleted = @possibilities.delete(num)
       end
@@ -33,7 +34,4 @@ end
 #row.solve
 row = Row.new('123 56789')
 row.reduce_possibility
-
-
-
-# put zero in blank spaces, then sub for real num as puzzle is solved
+# put zero in blank spaces, then sub for real num as puzzle is solved??
