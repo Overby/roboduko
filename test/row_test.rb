@@ -1,7 +1,7 @@
-
 require_relative '../lib/row'
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'pry'
 
 class RowTest < Minitest::Test
   def test_it_exists
@@ -39,7 +39,7 @@ class RowTest < Minitest::Test
   end
 
   def test_possibilities_array_has_nine_numbers
-    input = '123 56789'
+    input = '123 56789'  #use zero to fill in
     row = Row.new(input)
     assert_equal 9, row.possibilities.length
   end
@@ -52,11 +52,9 @@ class RowTest < Minitest::Test
   end
 
   def test_it_solves_row_missing_one_spot
-    skip
     input = '123 56789'
     row = Row.new(input)
-    assert_equal 9, row.possibilities.len
+    assert_equal 9, row.possibilities.length
   end
->>>>>>> 2731ae807c46405ea132cea7a8a655a617d8ff47
 
 end
