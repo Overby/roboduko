@@ -2,8 +2,6 @@ array of arrays...
 
 don't use strings...
 
-
-
 board
 spot
 square
@@ -11,4 +9,4 @@ column
 row
 
 
-start with board tests...go from there
+start with row tests...go from there
