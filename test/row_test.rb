@@ -10,10 +10,6 @@ class RowTest < Minitest::Test
     assert row
   end
 
-  # def test_it_takes_row_as_input
-  #   skip
-  # end
-
   def test_row_has_nine_spots
     input = '123 56789'
     row = Row.new(input)
@@ -32,14 +28,21 @@ class RowTest < Minitest::Test
     assert row.possibilities.last.is_a?(Integer)
   end
 
-  def test_possibilities_array_exists
+  def test_poss_array_exists
     input = '123 56789'
     row = Row.new(input)
     assert row.possibilities
   end
 
+  def test_it_takes_row_array_as_input
+    input = '123 56789'
+    row = Row.new(input)
+    #input = Array.new
+    assert_equal input[8].to_i, row.input.length
+    end
+
   def test_possibilities_array_has_nine_numbers
-    input = '123 56789'  #use zero to fill in
+    input = '123 56789'
     row = Row.new(input)
     assert_equal 9, row.possibilities.length
   end
@@ -57,4 +60,19 @@ class RowTest < Minitest::Test
     assert_equal 9, row.possibilities.length
   end
 
+  def test_it_knows_input_array_different_than_poss_array_data
+    input = '123 56789'
+    row = Row.new(input)
+    refute_equal input, row.possibilities
+  end
+
+  def test_it_inserts_zeros_for_input_missing_spots
+    input = '123 56789'
+    row = Row.new(input)
+    assert row.input.include?(0)
+  end
+
+  def test
+    skip
+  end
 end
