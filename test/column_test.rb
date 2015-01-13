@@ -4,7 +4,7 @@ require 'minitest/pride'
 require 'pry'
 
 class ColumnTest < Minitest::Test
-  #reminder on setup/teardown
+  #setup/teardown
   def test_it_exists
     input = '123 56789'
     col = Column.new(input)
@@ -36,7 +36,7 @@ class ColumnTest < Minitest::Test
   end
 
   def test_it_takes_col_array_as_input
-    input = '123 56789' #need?
+    input = '123 56789'
     col = Column.new(input)
     assert_equal input[8].to_i, col.input.length
   end
