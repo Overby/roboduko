@@ -38,7 +38,7 @@ class ColumnTest < Minitest::Test
   def test_it_takes_col_array_as_input
     input = '123 56789' #need?
     col = Column.new(input)
-    assert_equal input[8].to_i, row.input.length
+    assert_equal input[8].to_i, col.input.length
   end
 
   def test_poss_array_has_nine_integers
@@ -50,6 +50,7 @@ class ColumnTest < Minitest::Test
   def test_it_reduces_all_possibilities
     input = '123 56789'
     col = Column.new(input)
+    col.reduce_possibility
     assert_equal 1, col.possibilities.length
   end
 
@@ -71,8 +72,4 @@ class ColumnTest < Minitest::Test
     assert col.input.include?(0)
   end
 
-  def test
-    skip
-
-  end
 end
