@@ -1,7 +1,6 @@
 require_relative '../lib/boardbuilder'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'pry'
 
 class BoardBuilderTest < Minitest::Test
 
