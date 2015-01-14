@@ -26,7 +26,7 @@ class RowTest < Minitest::Test
     assert_equal "8", row.missing_number
     assert_equal ("123456789"), row.evaluate
   end
-
+end
   # def test_row_spots_are_integers
   #   input = '123 56789'
   #   row = Row.new(input)
@@ -82,7 +82,3 @@ class RowTest < Minitest::Test
   #   row = Row.new(input)
   #   assert row.input.include?(0)
   # end
-
-
-
-end
