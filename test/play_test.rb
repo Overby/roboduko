@@ -1,4 +1,4 @@
-require_relative '../lib/game'
+require_relative '../lib/play'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
@@ -9,45 +9,48 @@ require 'pry'
 #complete each row,col,sq accordingly
 #flow through game, each piece filled in
 
-class GameTest < Minitest::Test
-  def test_game_exists
-    game = Game.new
-    assert game
+class PlayTest < Minitest::Test
+  def test_play_exists
+    play = Play.new
+    assert play
   end
 
-  # def test_game_solves
+  # def test_play_solves
   #   skip
   #
   # end
 
   def test_row_plays_correctly
     skip
-    game = Game.new
+    play = Play.new
     #assert expected, actual
     assert
   end
 
   def test_column_plays_correctly
     skip
-    game = Game.new
+    play = Play.new
 
   end
 
   def test_square_plays_correctly
+    skip
 
   end
 
 
   def test_board_evaluates_properly
+    skip
 
   end
 
   def test_all_evaluations_work_properly
+    skip
 
   end
 
   def test_each_spot_reference_functions
-
+    skip
 
   end
 
@@ -58,5 +61,5 @@ class GameTest < Minitest::Test
   def test_missing_number_filled_in
 
   end
-  
+
 end
