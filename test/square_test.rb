@@ -1,4 +1,5 @@
-#come back to skip
+#come back to skip; fix eval
+
 require_relative '../lib/square'
 require 'minitest/autorun'
 require 'minitest/pride'
