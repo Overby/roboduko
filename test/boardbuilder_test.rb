@@ -20,12 +20,12 @@ class BoardBuilderTest < Minitest::Test
 
   def test_array_is_delimited
     skip
-
+    board = Board.new
   end
 
   def test_blank_spots_are_correct
     skip
-
+    board = Board.new
   end
 
   def test_it_implements_rows
@@ -42,17 +42,18 @@ class BoardBuilderTest < Minitest::Test
 
   def test_it_implements_squares
     skip
-    board - Board.new
+    board = Board.new
     assert_equal
   end
 
   def test_full_board_has_eighty_one_spots
     skip
-
+    board = Board.new
   end
 
   def test_only_accepts_integers_as_input
     skip
+    board = Board.new
 
   end
 

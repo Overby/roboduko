@@ -15,6 +15,11 @@ class PlayTest < Minitest::Test
     assert play
   end
 
+  def test_it_solves_one_blank_cell_on_board
+    skip
+    play = Play.new
+    game = File.readlines('/test')
+  end
   # def test_play_solves
   #   skip
   #
